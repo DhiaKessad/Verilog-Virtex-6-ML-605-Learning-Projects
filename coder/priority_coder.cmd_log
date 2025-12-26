@@ -1,6 +1,0 @@
-xst -intstyle ise -ifn "C:/Users/vboxuser/Documents/FPGA/coder/priority_coder.xst" -ofn "C:/Users/vboxuser/Documents/FPGA/coder/priority_coder.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc coder.ucf -p xc6vlx240t-ff1156-1 priority_coder.ngc priority_coder.ngd  
-map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o priority_coder_map.ncd priority_coder.ngd priority_coder.pcf 
-par -w -intstyle ise -ol high -mt off priority_coder_map.ncd priority_coder.ncd priority_coder.pcf 
-trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml priority_coder.twx priority_coder.ncd -o priority_coder.twr priority_coder.pcf -ucf coder.ucf 
-bitgen -intstyle ise -f priority_coder.ut priority_coder.ncd 
