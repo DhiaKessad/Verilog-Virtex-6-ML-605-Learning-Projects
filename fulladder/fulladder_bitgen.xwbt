@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\vboxuser\Documents\FPGA\dhia12\fulladder.ncd
+OUTFILE=C:\Users\vboxuser\Documents\FPGA\dhia12\fulladder.bit
+FAMILY=Virtex6
+PART=xc6vlx240t-1ff1156
+WORKINGDIR=C:\Users\vboxuser\Documents\FPGA\dhia12
+LICENSE=ISE
+USER_INFO=213682739_1777594569_0_006

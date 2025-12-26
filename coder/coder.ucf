@@ -1,0 +1,7 @@
+NET "a1"        LOC = "D22"    |  IOSTANDARD = LVCMOS25;
+NET "a2"        LOC = "C22"    |  IOSTANDARD = LVCMOS25;
+NET "a3"        LOC = "L21"    |  IOSTANDARD = LVCMOS25;
+NET "a4"        LOC = "L20"    |  IOSTANDARD = LVCMOS25;
+
+NET "x"         LOC = "AC24"    |  IOSTANDARD = LVCMOS25;
+NET "y"         LOC = "AC22"    |  IOSTANDARD = LVCMOS25;

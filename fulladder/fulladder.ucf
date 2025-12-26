@@ -1,0 +1,6 @@
+NET "a"            LOC = "D22"    |  IOSTANDARD = LVCMOS25;
+NET "b"            LOC = "C22"    |  IOSTANDARD = LVCMOS25;
+NET "carry_in"     LOC = "L21"    |  IOSTANDARD = LVCMOS25;
+
+NET "sum"          LOC = "AE24"    |  IOSTANDARD = LVCMOS25;
+NET "cout"         LOC = "AD24"    |  IOSTANDARD = LVCMOS25;

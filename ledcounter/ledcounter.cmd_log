@@ -1,0 +1,18 @@
+xst -intstyle ise -ifn "C:/Users/vboxuser/Documents/FPGA/ledcounter/ledcounter.xst" -ofn "C:/Users/vboxuser/Documents/FPGA/ledcounter/ledcounter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ledcounter.ucf -p xc6vlx240t-ff1156-1 ledcounter.ngc ledcounter.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ledcounter_map.ncd ledcounter.ngd ledcounter.pcf 
+par -w -intstyle ise -ol high -mt off ledcounter_map.ncd ledcounter.ncd ledcounter.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml ledcounter.twx ledcounter.ncd -o ledcounter.twr ledcounter.pcf -ucf ledcounter.ucf 
+xst -intstyle ise -ifn "C:/Users/vboxuser/Documents/FPGA/ledcounter/ledcounter.xst" -ofn "C:/Users/vboxuser/Documents/FPGA/ledcounter/ledcounter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ledcounter.ucf -p xc6vlx240t-ff1156-1 ledcounter.ngc ledcounter.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ledcounter_map.ncd ledcounter.ngd ledcounter.pcf 
+par -w -intstyle ise -ol high -mt off ledcounter_map.ncd ledcounter.ncd ledcounter.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml ledcounter.twx ledcounter.ncd -o ledcounter.twr ledcounter.pcf -ucf ledcounter.ucf 
+bitgen -intstyle ise -f ledcounter.ut ledcounter.ncd 
+xst -intstyle ise -ifn "C:/Users/vboxuser/Documents/FPGA/ledcounter/ledcounter.xst" -ofn "C:/Users/vboxuser/Documents/FPGA/ledcounter/ledcounter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ledcounter.ucf -p xc6vlx240t-ff1156-1 ledcounter.ngc ledcounter.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ledcounter_map.ncd ledcounter.ngd ledcounter.pcf 
+par -w -intstyle ise -ol high -mt off ledcounter_map.ncd ledcounter.ncd ledcounter.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml ledcounter.twx ledcounter.ncd -o ledcounter.twr ledcounter.pcf -ucf ledcounter.ucf 
+bitgen -intstyle ise -f ledcounter.ut ledcounter.ncd 
+bitgen -intstyle ise -f ledcounter.ut ledcounter.ncd 

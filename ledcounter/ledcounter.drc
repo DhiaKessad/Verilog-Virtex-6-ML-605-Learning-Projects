@@ -1,0 +1,8 @@
+Release 14.7 Drc P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Wed Dec 24 14:56:03 2025
+
+drc -z ledcounter.ncd ledcounter.pcf
+
+DRC detected 0 errors and 0 warnings.

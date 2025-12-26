@@ -1,0 +1,12 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Dec 23 13:53:59 2025
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "carry_in" LOCATE = SITE "L21" LEVEL 1;
+COMP "cout" LOCATE = SITE "AD24" LEVEL 1;
+COMP "sum" LOCATE = SITE "AE24" LEVEL 1;
+COMP "a" LOCATE = SITE "D22" LEVEL 1;
+COMP "b" LOCATE = SITE "C22" LEVEL 1;
+SCHEMATIC END;
+
