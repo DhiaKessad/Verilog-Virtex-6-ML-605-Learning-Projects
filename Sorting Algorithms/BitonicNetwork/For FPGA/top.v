@@ -1,14 +1,13 @@
 module top (
     input sys_clk_p, sys_clk_n,
     input btn_reset,  
-    input btn_fetch,  // G26 (Center Button)
-    input sw_order,   // D22 (DIP Switch 1)
-    // LCD Pins
+    input btn_fetch,  
+    input sw_order,   
     output LCD_RS, LCD_RW, LCD_E,
     output [3:0] LCD_DB
 );
 
-    // 1. Clock Management (200MHz to 50MHz)
+    // 200MHz to 50MHz
     wire clk_200, clk_50;
     IBUFGDS ibufg_clk (.I(sys_clk_p), .IB(sys_clk_n), .O(clk_200));
     
@@ -16,7 +15,7 @@ module top (
     always @(posedge clk_200) clk_div <= clk_div + 1'b1;
     assign clk_50 = clk_div[1];
 
-    // 2. ROM Logic & Fetch Control
+
     reg [3:0] rom_addr = 0;
     wire [63:0] rom_data;
     reg fetch_prev;
@@ -30,20 +29,19 @@ module top (
             rom_addr <= rom_addr + 1'b1;
     end
 
-    // Inferred ROM (Fill data.coe with the vector provided below)
+
     reg [63:0] rom_mem [0:15];
-    initial $readmemh("data.coe", rom_mem);
+    initial $readmemh("data.hex", rom_mem);
     assign rom_data = rom_mem[rom_addr];
 
-    // 3. Bitonic Sorter
     wire [63:0] sorted_out;
     bitonic #(8) sorter_inst (
         .data_in(rom_data),
-        .asc_mode(!sw_order), // sw_order=0 (Ascending), sw_order=1 (Descending)
+        .asc_mode(!sw_order), 
         .data_out(sorted_out)
     );
 
-    // 4. LCD Controller
+
     lcd_controller lcd_inst (
         .clk(clk_50),
         .rst(btn_reset),

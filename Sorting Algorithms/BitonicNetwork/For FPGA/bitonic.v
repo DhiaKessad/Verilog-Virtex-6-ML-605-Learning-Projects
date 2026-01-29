@@ -1,6 +1,6 @@
 module bitonic #(parameter WIDTH = 8) (
     input  [WIDTH*8-1:0] data_in,
-    input                asc_mode, // 1 for Smallest->Biggest, 0 for Biggest->Smallest
+    input                asc_mode, 
     output [WIDTH*8-1:0] data_out
 );
     wire [WIDTH-1:0] x [0:7];
