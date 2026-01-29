@@ -1,0 +1,14 @@
+NET "sys_clk_p" LOC = "J9";
+NET "sys_clk_n" LOC = "H9";
+
+NET "btn_reset" LOC = "H10"; 
+NET "btn_fetch" LOC = "G26"; 
+NET "sw_order"  LOC = "D22"; 
+
+NET "LCD_DB[0]" LOC = "AD14"; 
+NET "LCD_DB[1]" LOC = "AK11"; 
+NET "LCD_DB[2]" LOC = "AJ11"; 
+NET "LCD_DB[3]" LOC = "AE12"; 
+NET "LCD_E"     LOC = "AK12";
+NET "LCD_RS"    LOC = "T28";
+NET "LCD_RW"    LOC = "AC14";
